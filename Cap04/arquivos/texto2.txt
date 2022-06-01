@@ -1,0 +1,2 @@
+﻿"Friendly name","
+Status","CI type","M
