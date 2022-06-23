@@ -1,3 +1,4 @@
+
 import pandas as pd
 import os
 """open("diretorio",("r","w","a")) = Usada para abrir o arquivo
@@ -36,7 +37,7 @@ arq2.close()"""
 print(file.head())
 """
 
-# MANIPULAÇÃO DE ARQUIVOS
+# MANIPULAÇÃO DE ARQUIVOS TXT
 """with open ("Cap04/arquivos/dados.csv","r") as arquivo:
     conteudo = arquivo.read()
 
@@ -52,3 +53,20 @@ with open("Cap04/arquivos/texto2.txt","r") as arquivo:
     texto = arquivo.read()
 
 print(texto)"""
+
+## MANIPULAÇÃO DE ARQUIVOS CSV
+"""import csv # é importante analisar a documentação
+with open ("Cap04/arquivos/dados_2.csv","w") as arquivo:
+    writer = csv.writer(arquivo)#
+    writer.writerow(('Nome','Id do Produto','Patrimony','Tag Service'))
+    writer.writerow(('savio',4444,'Patrimony 10542','AS8F5T'))
+
+with open("Cap04/arquivos/dados.csv" , "r") as arquivo:
+    leitor = csv.reader(arquivo) #ler cada linha do arquivo csv
+    for x in leitor:
+        print("Numero de colunas: ",len(x))
+        print(x)      
+"""
+#MANIPULAÇÃO DE ARQUIVOS JSON
+
+ 
